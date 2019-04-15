@@ -8,7 +8,7 @@
 
 #### 版本
 
-* [Web version](https://github.com/shiwenna/codingStandards/)
+* [Web version](https://shiwenna.github.io/codingStandards/)
 * [ePub version](https://github.com/shiwenna/codingStandards/blob/master/build/epub/book.epub)
 
 
