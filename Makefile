@@ -31,11 +31,11 @@ docs: $(DOCS)/$(DOCS_FILENAME).html
 
 $(BUILD)/epub/$(OUTPUT_FILENAME).epub: $(METADATA) $(CHAPTERS)
 	mkdir -p $(BUILD)/epub
-	pandoc -s $(ARGS) --epub-metadata=$(METADATA) --epub-cover-image=$(COVER_IMAGE) -o $@ $^
+	pandoc $(ARGS) --epub-metadata=$(METADATA) --epub-cover-image=$(COVER_IMAGE) -o $@ $^
 
 $(BUILD)/html/$(OUTPUT_FILENAME).html: $(CHAPTERS)
 	mkdir -p $(BUILD)/html
-	pandoc -s $(ARGS) --standalone --to=html5 -o $@ $^
+	pandoc $(ARGS) --standalone --to=html5 -o $@ $^
 	cp -R $(IMAGES_FOLDER)/ $(BUILD)/html/$(IMAGES_FOLDER)/
 	cp $(CSS_FILE) $(BUILD)/html/$(CSS_FILE)
 
