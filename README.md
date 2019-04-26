@@ -10,6 +10,7 @@
 
 * [Web version](https://shiwenna.github.io/codingStandards/)
 * [ePub version](https://github.com/shiwenna/codingStandards/blob/master/build/epub/book.epub)
+* [pdf version](https://github.com/shiwenna/codingStandards/blob/master/build/pdf/book.pdf)
 
 
 
