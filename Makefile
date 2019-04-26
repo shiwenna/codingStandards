@@ -15,7 +15,7 @@ ARGS = $(TOC) $(MATH_FORMULAS) $(CSS_ARG)
 
 all: book
 
-book: epub html docs
+book: epub html pdf docs
 
 clean:
 	rm -r $(BUILD)
@@ -25,7 +25,7 @@ epub: $(BUILD)/epub/$(OUTPUT_FILENAME).epub
 
 html: $(BUILD)/html/$(OUTPUT_FILENAME).html
 
-# pdf: $(BUILD)/pdf/$(OUTPUT_FILENAME).pdf
+pdf: $(BUILD)/pdf/$(OUTPUT_FILENAME).pdf
 
 docs: $(DOCS)/$(DOCS_FILENAME).html
 
@@ -39,9 +39,9 @@ $(BUILD)/html/$(OUTPUT_FILENAME).html: $(CHAPTERS)
 	cp -R $(IMAGES_FOLDER)/ $(BUILD)/html/$(IMAGES_FOLDER)/
 	cp $(CSS_FILE) $(BUILD)/html/$(CSS_FILE)
 
-# $(BUILD)/pdf/$(OUTPUT_FILENAME).pdf: $(METADATA) $(CHAPTERS)
-# 	mkdir -p $(BUILD)/pdf
-# 	pandoc $(ARGS) -V documentclass=$(LATEX_CLASS) -o $@ $^
+$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf: $(METADATA) $(CHAPTERS)
+	mkdir -p $(BUILD)/pdf
+	pandoc $(ARGS) -V documentclass=$(LATEX_CLASS) -o $@ $^ --pdf-engine=xelatex -V mainfont=SimSun   
 
 
 $(DOCS)/$(DOCS_FILENAME).html: $(CHAPTERS)

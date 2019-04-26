@@ -1,9 +1,9 @@
 ---
-title: 代码规范-前端
+title: CodingStandards-frontend
 author: caoshuangna
 rights:  Creative Commons Attribution 4.0 International
 language: zh-CN
-tags: [JavaScript , html, css, web development]
+tags: [JavaScript , HTML, css, web development]
 abstract: |
-  前端编码规范
+  Front-end coding specifications, including basic, JavaScript, css, HTML. The purpose of this specification is to call software engineers to focus on code quality, adhering to industry-recognized standards and specifications, and ultimately improving software quality.
 ---
